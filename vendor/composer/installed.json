@@ -5700,5 +5700,67 @@
             "backup",
             "laravel-admin"
         ]
+    },
+    {
+        "name": "laravel-admin-ext/messages",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/laravel-admin-extensions/messages.git",
+            "reference": "a935775bedaedad20fb30dd1464e2fdf6a3e42f2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/laravel-admin-extensions/messages/zipball/a935775bedaedad20fb30dd1464e2fdf6a3e42f2",
+            "reference": "a935775bedaedad20fb30dd1464e2fdf6a3e42f2",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "encore/laravel-admin": "1.5.*",
+            "laravel/framework": "5.5.*",
+            "php": ">=7.0.0"
+        },
+        "require-dev": {
+            "laravel/laravel": "5.*",
+            "phpunit/phpunit": "~6.0"
+        },
+        "time": "2017-09-28T02:15:00+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Encore\\Admin\\Message\\MessageServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Encore\\Admin\\Message\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "z-song",
+                "email": "zosong@126.com"
+            }
+        ],
+        "description": "Message extension for laravel-admin",
+        "homepage": "https://github.com/laravel-admin-extensions/messages",
+        "keywords": [
+            "laravel-admin",
+            "messages"
+        ]
     }
 ]

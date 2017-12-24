@@ -47,6 +47,7 @@ return array(
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'Encore\\Admin\\Scheduling\\' => array($vendorDir . '/laravel-admin-ext/scheduling/src'),
     'Encore\\Admin\\Reporter\\' => array($vendorDir . '/laravel-admin-ext/reporter/src'),
+    'Encore\\Admin\\Message\\' => array($vendorDir . '/laravel-admin-ext/messages/src'),
     'Encore\\Admin\\Media\\' => array($vendorDir . '/laravel-admin-ext/media-manager/src'),
     'Encore\\Admin\\LogViewer\\' => array($vendorDir . '/laravel-admin-ext/log-viewer/src'),
     'Encore\\Admin\\Helpers\\' => array($vendorDir . '/laravel-admin-ext/helpers/src'),
