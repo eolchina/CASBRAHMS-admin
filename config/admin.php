@@ -151,6 +151,20 @@ return [
      * Settings for extensions.
      */
     'extensions' => [
+        
+        'media-manager' => [
+            'disk' => 'uploads'
+        ],
+
+        'api-tester' => [
+            'prefix' => 'api',
+
+            'guard'  => 'api',
+
+            'user_retriever' => function ($id) {
+                return \App\User::find($id);
+            },
+        ]
 
     ],
 ];

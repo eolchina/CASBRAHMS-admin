@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Model\Taxonomyterm;
+use App\Models\Taxonomyterm;
 
 class TaxonomytermsTableSeeder extends Seeder
 {

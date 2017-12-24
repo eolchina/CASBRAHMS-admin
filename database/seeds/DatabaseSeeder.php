@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call(TaxonomytermsTableSeeder::class);
+        $this->call(UsersTableSeeder::class);
+        $this->call(ChinaAreaTableSeeder::class);
 
 
         Model::reguard();

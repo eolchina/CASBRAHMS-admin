@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Model\Taxonomyterm;
+use App\Models\Taxonomyterm;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -79,6 +79,16 @@ class TaxonomytermController extends Controller
 
             $grid->created_at();
             $grid->updated_at();
+
+            $grid->filter(function (Grid\Filter $filter) {
+
+                $filter->disableIdFilter();
+
+                $filter->like('name', 'name');
+
+                $filter->between('updated_at')->datetime();
+
+             });
         });
     }
 
@@ -93,7 +103,7 @@ class TaxonomytermController extends Controller
 
             $form->display('id', 'ID');
 
-            $form->display('name', 'Taxon Name');
+            $form->text('name', 'Taxon Name');
 
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');

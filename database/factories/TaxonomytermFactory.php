@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Model\Taxonomyterm::class, function (Faker $faker) {
+$factory->define(App\Models\Taxonomyterm::class, function (Faker $faker) {
     $date_time = $faker->date . ' ' . $faker->time;
     return [
         'parent_id' => $faker->randomDigit,
