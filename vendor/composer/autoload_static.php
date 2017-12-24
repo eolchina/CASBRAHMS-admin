@@ -96,8 +96,13 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         ),
         'E' => 
         array (
+            'Encore\\Admin\\Scheduling\\' => 24,
+            'Encore\\Admin\\Reporter\\' => 22,
             'Encore\\Admin\\Media\\' => 19,
+            'Encore\\Admin\\LogViewer\\' => 23,
             'Encore\\Admin\\Helpers\\' => 21,
+            'Encore\\Admin\\Config\\' => 20,
+            'Encore\\Admin\\ApiTester\\' => 23,
             'Encore\\Admin\\' => 13,
             'Egulias\\EmailValidator\\' => 23,
         ),
@@ -271,13 +276,33 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
+        'Encore\\Admin\\Scheduling\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/scheduling/src',
+        ),
+        'Encore\\Admin\\Reporter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/reporter/src',
+        ),
         'Encore\\Admin\\Media\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel-admin-ext/media-manager/src',
         ),
+        'Encore\\Admin\\LogViewer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/log-viewer/src',
+        ),
         'Encore\\Admin\\Helpers\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel-admin-ext/helpers/src',
+        ),
+        'Encore\\Admin\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/config/src',
+        ),
+        'Encore\\Admin\\ApiTester\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src',
         ),
         'Encore\\Admin\\' => 
         array (
@@ -424,6 +449,7 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
+        'App\\Providers\\CustomUserProvider' => __DIR__ . '/../..' . '/app/Providers/CustomUserProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
@@ -629,6 +655,11 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/Warning.php',
         'Encore\\Admin\\Admin' => __DIR__ . '/..' . '/encore/laravel-admin/src/Admin.php',
         'Encore\\Admin\\AdminServiceProvider' => __DIR__ . '/..' . '/encore/laravel-admin/src/AdminServiceProvider.php',
+        'Encore\\Admin\\ApiTester\\ApiLogger' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/ApiLogger.php',
+        'Encore\\Admin\\ApiTester\\ApiTester' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/ApiTester.php',
+        'Encore\\Admin\\ApiTester\\ApiTesterController' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/ApiTesterController.php',
+        'Encore\\Admin\\ApiTester\\ApiTesterServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/ApiTesterServiceProvider.php',
+        'Encore\\Admin\\ApiTester\\BootExtension' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/BootExtension.php',
         'Encore\\Admin\\Auth\\Database\\AdminTablesSeeder' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/AdminTablesSeeder.php',
         'Encore\\Admin\\Auth\\Database\\Administrator' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/Administrator.php',
         'Encore\\Admin\\Auth\\Database\\HasPermissions' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/HasPermissions.php',
@@ -637,6 +668,10 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         'Encore\\Admin\\Auth\\Database\\Permission' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/Permission.php',
         'Encore\\Admin\\Auth\\Database\\Role' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/Role.php',
         'Encore\\Admin\\Auth\\Permission' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Permission.php',
+        'Encore\\Admin\\Config\\Config' => __DIR__ . '/..' . '/laravel-admin-ext/config/src/Config.php',
+        'Encore\\Admin\\Config\\ConfigController' => __DIR__ . '/..' . '/laravel-admin-ext/config/src/ConfigController.php',
+        'Encore\\Admin\\Config\\ConfigModel' => __DIR__ . '/..' . '/laravel-admin-ext/config/src/ConfigModel.php',
+        'Encore\\Admin\\Config\\ConfigServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/config/src/ConfigServiceProvider.php',
         'Encore\\Admin\\Console\\ImportCommand' => __DIR__ . '/..' . '/encore/laravel-admin/src/Console/ImportCommand.php',
         'Encore\\Admin\\Console\\InstallCommand' => __DIR__ . '/..' . '/encore/laravel-admin/src/Console/InstallCommand.php',
         'Encore\\Admin\\Console\\MakeCommand' => __DIR__ . '/..' . '/encore/laravel-admin/src/Console/MakeCommand.php',
@@ -780,6 +815,10 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         'Encore\\Admin\\Layout\\Column' => __DIR__ . '/..' . '/encore/laravel-admin/src/Layout/Column.php',
         'Encore\\Admin\\Layout\\Content' => __DIR__ . '/..' . '/encore/laravel-admin/src/Layout/Content.php',
         'Encore\\Admin\\Layout\\Row' => __DIR__ . '/..' . '/encore/laravel-admin/src/Layout/Row.php',
+        'Encore\\Admin\\LogViewer\\BootExtension' => __DIR__ . '/..' . '/laravel-admin-ext/log-viewer/src/BootExtension.php',
+        'Encore\\Admin\\LogViewer\\LogController' => __DIR__ . '/..' . '/laravel-admin-ext/log-viewer/src/LogController.php',
+        'Encore\\Admin\\LogViewer\\LogViewer' => __DIR__ . '/..' . '/laravel-admin-ext/log-viewer/src/LogViewer.php',
+        'Encore\\Admin\\LogViewer\\LogViewerServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/log-viewer/src/LogViewerServiceProvider.php',
         'Encore\\Admin\\Media\\BootExtension' => __DIR__ . '/..' . '/laravel-admin-ext/media-manager/src/BootExtension.php',
         'Encore\\Admin\\Media\\MediaController' => __DIR__ . '/..' . '/laravel-admin-ext/media-manager/src/MediaController.php',
         'Encore\\Admin\\Media\\MediaManager' => __DIR__ . '/..' . '/laravel-admin-ext/media-manager/src/MediaManager.php',
@@ -789,6 +828,18 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         'Encore\\Admin\\Middleware\\LogOperation' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/LogOperation.php',
         'Encore\\Admin\\Middleware\\Permission' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/Permission.php',
         'Encore\\Admin\\Middleware\\Pjax' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/Pjax.php',
+        'Encore\\Admin\\Reporter\\BootExtension' => __DIR__ . '/..' . '/laravel-admin-ext/reporter/src/BootExtension.php',
+        'Encore\\Admin\\Reporter\\ExceptionController' => __DIR__ . '/..' . '/laravel-admin-ext/reporter/src/ExceptionController.php',
+        'Encore\\Admin\\Reporter\\ExceptionModel' => __DIR__ . '/..' . '/laravel-admin-ext/reporter/src/ExceptionModel.php',
+        'Encore\\Admin\\Reporter\\Reporter' => __DIR__ . '/..' . '/laravel-admin-ext/reporter/src/Reporter.php',
+        'Encore\\Admin\\Reporter\\ReporterServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/reporter/src/ReporterServiceProvider.php',
+        'Encore\\Admin\\Reporter\\Tracer\\CodeBlock' => __DIR__ . '/..' . '/laravel-admin-ext/reporter/src/Tracer/CodeBlock.php',
+        'Encore\\Admin\\Reporter\\Tracer\\Frame' => __DIR__ . '/..' . '/laravel-admin-ext/reporter/src/Tracer/Frame.php',
+        'Encore\\Admin\\Reporter\\Tracer\\Parser' => __DIR__ . '/..' . '/laravel-admin-ext/reporter/src/Tracer/Parser.php',
+        'Encore\\Admin\\Scheduling\\CronSchedule' => __DIR__ . '/..' . '/laravel-admin-ext/scheduling/src/CronSchedule.php',
+        'Encore\\Admin\\Scheduling\\Scheduling' => __DIR__ . '/..' . '/laravel-admin-ext/scheduling/src/Scheduling.php',
+        'Encore\\Admin\\Scheduling\\SchedulingController' => __DIR__ . '/..' . '/laravel-admin-ext/scheduling/src/SchedulingController.php',
+        'Encore\\Admin\\Scheduling\\SchedulingServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/scheduling/src/SchedulingServiceProvider.php',
         'Encore\\Admin\\Traits\\AdminBuilder' => __DIR__ . '/..' . '/encore/laravel-admin/src/Traits/AdminBuilder.php',
         'Encore\\Admin\\Traits\\ModelTree' => __DIR__ . '/..' . '/encore/laravel-admin/src/Traits/ModelTree.php',
         'Encore\\Admin\\Tree' => __DIR__ . '/..' . '/encore/laravel-admin/src/Tree.php',

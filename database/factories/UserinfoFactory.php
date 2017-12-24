@@ -10,7 +10,7 @@ $factory->define(App\Models\User\Profile::class, function (Faker $faker) {
 
     return [
         'user_id' => $faker->numberBetween(1, 100),
-        'homepage' => $faker->name,
+        'homepage' => $faker->url,
         'mobile' => $faker->phoneNumber,
         'avatar' => $faker->url,
         'document' => $faker->imageUrl($width = 400, $height = 200, 'nature'),

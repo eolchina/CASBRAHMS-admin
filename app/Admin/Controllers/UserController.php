@@ -77,13 +77,13 @@ class UserController extends Controller
 
             }, 'Position');
 
-            // $grid->column('profile.homepage')->urlWrapper();// urlWrapper() need to add to Grid\Column src
+            $grid->column('profile.homepage')->urlWrapper();// urlWrapper() need to add to Grid\Column src
 
-            $grid->column('profile.homepage');
+            // $grid->column('profile.homepage');
 
-            // $grid->email()->prependIcon('envelope');//prependIcon() need to add to src
+            $grid->email()->prependIcon('envelope');//prependIcon() need to add to src
 
-            $grid->email();
+            // $grid->email();
 
             //$grid->profile()->mobile()->prependIcon('phone');
 
