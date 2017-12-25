@@ -99,6 +99,8 @@ class UserController extends Controller
 
 //                $filter->disableIdFilter();
 
+                $filter->like('name', 'Name');
+
                 $filter->equal('address.province_id', 'Province')
                     ->select(ChinaArea::province()->pluck('name', 'id'))
                     ->load('address.city_id', '/demo/api/china/city');

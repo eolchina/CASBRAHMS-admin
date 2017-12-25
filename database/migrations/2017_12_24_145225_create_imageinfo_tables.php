@@ -39,6 +39,8 @@ class CreateImageinfoTables extends Migration
      */
     public function down()
     {
-        //
+        
+        Schema::dropIfExists('images');
+        Schema::dropIfExists('multiple_images');
     }
 }
