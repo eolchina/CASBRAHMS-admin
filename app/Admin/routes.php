@@ -38,6 +38,7 @@ Route::group([
         'china/district'        => China\DistrictController::class,
 
         'taxonomyterms'         => TaxonomytermController::class,
+        'terms'                 => TermController::class,
     ]);
 
     $router->post('posts/release', 'PostController@release');
