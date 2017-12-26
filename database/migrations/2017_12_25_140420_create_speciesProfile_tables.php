@@ -16,8 +16,11 @@ class CreateSpeciesProfileTables extends Migration
         
          Schema::create('data_terms', function ( Blueprint $table) {
             $table->increments('id');
+            $table->integer('parent_id')->nullable()->default(0);
+            $table->integer('lft');
+            $table->integer('rgt');
+            $table->integer('depth');
             $table->integer('term_rank_id');
-            $table->integer('parent_id');
             $table->integer('term_author_id');
             $table->integer('term_usage_id');
             $table->string('name');
@@ -35,6 +38,10 @@ class CreateSpeciesProfileTables extends Migration
 
          Schema::create('data_term_ranks', function ( Blueprint $table) {
             $table->increments('id');
+            $table->integer('parent_id')->nullable()->default(0);
+            $table->integer('lft');
+            $table->integer('rgt');
+            $table->integer('depth');
             $table->string('name');
             $table->string('localName');
             $table->timestamps();

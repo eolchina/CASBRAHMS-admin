@@ -84,10 +84,6 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
             'League\\Flysystem\\' => 17,
             'Laravel\\Tinker\\' => 15,
         ),
-        'K' => 
-        array (
-            'Kalnoy\\Nestedset\\' => 17,
-        ),
         'I' => 
         array (
             'Intervention\\Image\\' => 19,
@@ -278,10 +274,6 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
         ),
-        'Kalnoy\\Nestedset\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/kalnoy/nestedset/src',
-        ),
         'Intervention\\Image\\' => 
         array (
             0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
@@ -421,6 +413,13 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
                 0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
             ),
         ),
+        'B' => 
+        array (
+            'Baum' => 
+            array (
+                0 => __DIR__ . '/..' . '/gazsp/baum/src',
+            ),
+        ),
     );
 
     public static $classMap = array (
@@ -430,6 +429,7 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         'App\\Admin\\Controllers\\China\\CityController' => __DIR__ . '/../..' . '/app/Admin/Controllers/China/CityController.php',
         'App\\Admin\\Controllers\\China\\DistrictController' => __DIR__ . '/../..' . '/app/Admin/Controllers/China/DistrictController.php',
         'App\\Admin\\Controllers\\China\\ProvinceController' => __DIR__ . '/../..' . '/app/Admin/Controllers/China/ProvinceController.php',
+        'App\\Admin\\Controllers\\DataController' => __DIR__ . '/../..' . '/app/Admin/Controllers/DataController.php',
         'App\\Admin\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ExampleController.php',
         'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
         'App\\Admin\\Controllers\\ImageController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ImageController.php',
@@ -491,6 +491,16 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         'App\\Models\\Article' => __DIR__ . '/../..' . '/app/Models/Article.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\ChinaArea' => __DIR__ . '/../..' . '/app/Models/ChinaArea.php',
+        'App\\Models\\Data\\Botanist' => __DIR__ . '/../..' . '/app/Models/Data/Botanist.php',
+        'App\\Models\\Data\\Collection' => __DIR__ . '/../..' . '/app/Models/Data/Collection.php',
+        'App\\Models\\Data\\Collector' => __DIR__ . '/../..' . '/app/Models/Data/Collector.php',
+        'App\\Models\\Data\\Determination' => __DIR__ . '/../..' . '/app/Models/Data/Determination.php',
+        'App\\Models\\Data\\Geolocation' => __DIR__ . '/../..' . '/app/Models/Data/Geolocation.php',
+        'App\\Models\\Data\\Geomountain' => __DIR__ . '/../..' . '/app/Models/Data/Geomountain.php',
+        'App\\Models\\Data\\Herbarium' => __DIR__ . '/../..' . '/app/Models/Data/Herbarium.php',
+        'App\\Models\\Data\\Nomentype' => __DIR__ . '/../..' . '/app/Models/Data/Nomentype.php',
+        'App\\Models\\Data\\Specimen' => __DIR__ . '/../..' . '/app/Models/Data/Specimen.php',
+        'App\\Models\\Data\\SpecimenImage' => __DIR__ . '/../..' . '/app/Models/Data/SpecimenImage.php',
         'App\\Models\\Data\\Term' => __DIR__ . '/../..' . '/app/Models/Data/Term.php',
         'App\\Models\\Data\\TermAuthor' => __DIR__ . '/../..' . '/app/Models/Data/TermAuthor.php',
         'App\\Models\\Data\\TermCommonName' => __DIR__ . '/../..' . '/app/Models/Data/TermCommonName.php',
@@ -553,6 +563,21 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         'Barryvdh\\Debugbar\\Twig\\Extension\\Stopwatch' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/Twig/Extension/Stopwatch.php',
         'Barryvdh\\Debugbar\\Twig\\Node\\StopwatchNode' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/Twig/Node/StopwatchNode.php',
         'Barryvdh\\Debugbar\\Twig\\TokenParser\\StopwatchTokenParser' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/Twig/TokenParser/StopwatchTokenParser.php',
+        'Baum\\Console\\BaumCommand' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/Console/BaumCommand.php',
+        'Baum\\Console\\InstallCommand' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/Console/InstallCommand.php',
+        'Baum\\Extensions\\Eloquent\\Collection' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/Extensions/Eloquent/Collection.php',
+        'Baum\\Extensions\\Eloquent\\Model' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/Extensions/Eloquent/Model.php',
+        'Baum\\Extensions\\Query\\Builder' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/Extensions/Query/Builder.php',
+        'Baum\\Generators\\Generator' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/Generators/Generator.php',
+        'Baum\\Generators\\MigrationGenerator' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/Generators/MigrationGenerator.php',
+        'Baum\\Generators\\ModelGenerator' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/Generators/ModelGenerator.php',
+        'Baum\\Move' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/Move.php',
+        'Baum\\MoveNotPossibleException' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/MoveNotPossibleException.php',
+        'Baum\\Node' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/Node.php',
+        'Baum\\Providers\\BaumServiceProvider' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/Providers/BaumServiceProvider.php',
+        'Baum\\SetBuilder' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/SetBuilder.php',
+        'Baum\\SetMapper' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/SetMapper.php',
+        'Baum\\SetValidator' => __DIR__ . '/..' . '/gazsp/baum/src/Baum/SetValidator.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
@@ -1460,6 +1485,7 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+        'HerbariumInfoTablesSeeder' => __DIR__ . '/../..' . '/database/seeds/HerbariumInfoTablesSeeder.php',
         'Illuminate\\Auth\\Access\\AuthorizationException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/AuthorizationException.php',
         'Illuminate\\Auth\\Access\\Gate' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/Gate.php',
         'Illuminate\\Auth\\Access\\HandlesAuthorization' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/HandlesAuthorization.php',
@@ -2359,13 +2385,6 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
-        'Kalnoy\\Nestedset\\AncestorsRelation' => __DIR__ . '/..' . '/kalnoy/nestedset/src/AncestorsRelation.php',
-        'Kalnoy\\Nestedset\\BaseRelation' => __DIR__ . '/..' . '/kalnoy/nestedset/src/BaseRelation.php',
-        'Kalnoy\\Nestedset\\Collection' => __DIR__ . '/..' . '/kalnoy/nestedset/src/Collection.php',
-        'Kalnoy\\Nestedset\\DescendantsRelation' => __DIR__ . '/..' . '/kalnoy/nestedset/src/DescendantsRelation.php',
-        'Kalnoy\\Nestedset\\NestedSet' => __DIR__ . '/..' . '/kalnoy/nestedset/src/NestedSet.php',
-        'Kalnoy\\Nestedset\\NodeTrait' => __DIR__ . '/..' . '/kalnoy/nestedset/src/NodeTrait.php',
-        'Kalnoy\\Nestedset\\QueryBuilder' => __DIR__ . '/..' . '/kalnoy/nestedset/src/QueryBuilder.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',

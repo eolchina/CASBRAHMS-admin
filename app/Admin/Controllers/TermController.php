@@ -33,6 +33,11 @@ class TermController extends Controller
             $content->description('here is an examle of how taxonomic term data could be used description');
 
             $content->body($this->grid());
+
+
+            $content->body(view('admin.bigtree.tree'));
+
+            // $content->body(view('admin.charts.bar'));
         });
     }
 
@@ -121,5 +126,12 @@ class TermController extends Controller
             // $form->display('created_at', 'Created At');
             // $form->display('updated_at', 'Updated At');
         });
+    }
+
+    public function tree()
+    {
+        // return Term::where('name', '=', 'root')->first()->getDescendantsAndSelf()->toHierarchy();
+        // return Term::where('name', '=', 'root')->first()->getDescendantsAndSelf()->toHierarchy()->toArray();
+        return Term::where('name', '=', 'root')->first()->getDescendantsAndSelf()->toHierarchy()->toJson();
     }
 }

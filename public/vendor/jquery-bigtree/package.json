@@ -1,0 +1,56 @@
+{
+  "_from": "jquery-bigtree",
+  "_id": "jquery-bigtree@1.0.8",
+  "_inBundle": false,
+  "_integrity": "sha1-TbLWfCKhsk1D/wCxZTXEH6SCFn0=",
+  "_location": "/jquery-bigtree",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "jquery-bigtree",
+    "name": "jquery-bigtree",
+    "escapedName": "jquery-bigtree",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/jquery-bigtree/-/jquery-bigtree-1.0.8.tgz",
+  "_shasum": "4db2d67c22a1b24d43ff00b16535c41fa482167d",
+  "_spec": "jquery-bigtree",
+  "_where": "/Users/lisong/Code/CASBRAHMS-admin",
+  "author": {
+    "name": "londomloto"
+  },
+  "bugs": {
+    "url": "https://github.com/londomloto/bigtree/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "High performance jQuery plugin for rendering hierarchical data based on nested set model (pre-order tree)",
+  "files": [
+    "jquery.bigtree.js",
+    "jquery.bigtree.css"
+  ],
+  "homepage": "https://github.com/londomloto/bigtree#readme",
+  "keywords": [
+    "jquery-plugin",
+    "tree",
+    "grid"
+  ],
+  "license": "ISC",
+  "main": "jquery.bigtree.js",
+  "name": "jquery-bigtree",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/londomloto/bigtree.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.8"
+}

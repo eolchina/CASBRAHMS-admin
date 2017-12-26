@@ -61,4 +61,9 @@ Route::group([
     $router->get('widgets/tab', 'WidgetsController@tab');
     $router->get('widgets/notice', 'WidgetsController@notice');
     $router->get('widgets/editors', 'WidgetsController@editors');
+
+    //For examples
+    $router->get('data/tree', 'TermController@tree');
+    $router->get('data/charts', 'DataController@index');
+    $router->get('data/maps', 'DataController@openMap');
 });

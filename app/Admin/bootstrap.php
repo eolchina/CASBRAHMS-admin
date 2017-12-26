@@ -38,6 +38,15 @@ Admin::css('/vendor/prism/prism.css');
 Admin::js('/vendor/prism/prism.js');
 Admin::js('/vendor/clipboard/dist/clipboard.min.js');
 
+Admin::js('/vendor/chartjs/dist/Chart.min.js');
+
+//Big tree config
+Admin::css('/vendor/jquery-bigtree/jquery.bigtree.css');
+Admin::js('/vendor/jquery-bigtree/jquery.bigtree.js');
+// Admin::js('/vendor/jquery-bigtree/jsrender.min.js');
+// Admin::js('/vendor/jquery-bigtree/jquery-2.2.1.min.js');
+// Admin::js('/vendor/jquery-bigtree/jquery.ba-throttle-debounce.min.js');
+
 Column::extend('expand', ExpandRow::class);
 Column::extend('openMap', OpenMap::class);
 Column::extend('floatBar', FloatBar::class);

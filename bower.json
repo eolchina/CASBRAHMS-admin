@@ -1,0 +1,18 @@
+{
+  "name": "Laravel-CASBRAHMS-admin",
+  "description": "Laravel5.5 based app",
+  "main": "",
+  "authors": [
+    "eolchina <lswang@ibcas.ac.cn>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/eolchina/CASBRAHMS-admin",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ]
+}

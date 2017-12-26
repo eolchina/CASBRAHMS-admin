@@ -8,8 +8,11 @@ $factory->define(App\Models\Data\Term::class, function (Faker $faker) {
 
 
     return [
-        'term_rank_id' => $faker->numberBetween(1, 10),
         'parent_id' => $faker->numberBetween(1, 10),
+        'lft' => $faker->numberBetween(1, 10),
+        'rgt' => $faker->numberBetween(1, 10),
+        'depth' => $faker->numberBetween(1, 10),
+        'term_rank_id' => $faker->numberBetween(1, 10),
         'term_author_id' => $faker->numberBetween(1, 10),
         'term_usage_id' => $faker->numberBetween(1, 10),
         'name' => $faker->name,
@@ -36,6 +39,10 @@ $factory->define(App\Models\Data\TermRank::class, function (Faker $faker) {
     $date_time = $faker->date . ' ' . $faker->time;
 
     return [
+        'parent_id' => $faker->numberBetween(1, 10),
+        'lft' => $faker->numberBetween(1, 10),
+        'rgt' => $faker->numberBetween(1, 10),
+        'depth' => $faker->numberBetween(1, 10),
         'name' => $faker->randomElement($array = array('Kingdom', 'Pylum', 'Class', 'Order', 'Family', 'Genus', 'Species', 'Variety')),
         'localName' => $faker->randomElement($array = array('界', '门', '纲', '目', '科', '属', '种', '变种')),
         'created_at' => $date_time,
