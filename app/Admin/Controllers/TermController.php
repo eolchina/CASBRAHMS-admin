@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use App\Models\Data\Term;
 use App\Models\Data\TermRank;
 use App\Models\Data\TermAuthor;
@@ -80,12 +81,15 @@ class TermController extends Controller
             $grid->id('ID')->sortable();
 
             $grid->name('name');
+            $grid->commonName('CommonName');
+
             $grid->rank()->localName('分类等级');
 
             $grid->author()->name('作者');
+            $grid->usage()->name('Usage');
 
-            $grid->reference('refProto');
-            $grid->links('refLink');
+            $grid->refProto('Reference');
+            $grid->refLink('Links');
 
             $grid->created_at();
             $grid->updated_at();
@@ -103,8 +107,19 @@ class TermController extends Controller
 
             $form->display('id', 'ID');
 
-            $form->display('created_at', 'Created At');
-            $form->display('updated_at', 'Updated At');
+            $form->text('name', 'Name');
+
+            // $ranks = DB::table('data_term_ranks')->pluck('name');
+
+            // $ranks = $grid->rank()->localName();
+
+            $form->select('rank', 'Rank')->options(TermRank::all()->pluck('localName'));
+            $form->select('usage', 'Usage')->options(TermUsage::all()->pluck('name'));
+            $form->select('commonname', 'Common Name')->options(TermCommonName::all()->pluck('name'));
+
+
+            // $form->display('created_at', 'Created At');
+            // $form->display('updated_at', 'Updated At');
         });
     }
 }

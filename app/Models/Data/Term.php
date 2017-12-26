@@ -30,7 +30,8 @@ class Term extends Model
     public function commonName()
     {
     	
-    	return $this->belongsTo(TermCommonName::class)->withDefault();
+        // return $this->belongsTo(TermCommonName::class)->withDefault();
+    	return $this->belongsTo(TermCommonName::class);
     }
 
 

@@ -5762,5 +5762,67 @@
             "laravel-admin",
             "messages"
         ]
+    },
+    {
+        "name": "kalnoy/nestedset",
+        "version": "v4.3.1",
+        "version_normalized": "4.3.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/lazychaser/laravel-nestedset.git",
+            "reference": "892b9a730fbb70d16a66f58f8eb2a46164cb3609"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/lazychaser/laravel-nestedset/zipball/892b9a730fbb70d16a66f58f8eb2a46164cb3609",
+            "reference": "892b9a730fbb70d16a66f58f8eb2a46164cb3609",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "illuminate/database": "5.2 - 5.5",
+            "illuminate/events": "5.2 - 5.5",
+            "illuminate/support": "5.2 - 5.5",
+            "php": ">=5.5.9"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.8.*"
+        },
+        "time": "2017-11-26T07:18:24+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "v4.2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Kalnoy\\Nestedset\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Alexander Kalnoy",
+                "email": "lazychaser@gmail.com"
+            }
+        ],
+        "description": "Nested Set Model for Laravel 4-5",
+        "keywords": [
+            "database",
+            "hierarchy",
+            "laravel",
+            "nested sets",
+            "nsm"
+        ]
     }
 ]

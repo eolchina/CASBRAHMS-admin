@@ -84,6 +84,10 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
             'League\\Flysystem\\' => 17,
             'Laravel\\Tinker\\' => 15,
         ),
+        'K' => 
+        array (
+            'Kalnoy\\Nestedset\\' => 17,
+        ),
         'I' => 
         array (
             'Intervention\\Image\\' => 19,
@@ -274,6 +278,10 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
         ),
+        'Kalnoy\\Nestedset\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kalnoy/nestedset/src',
+        ),
         'Intervention\\Image\\' => 
         array (
             0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
@@ -431,6 +439,7 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         'App\\Admin\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Admin/Controllers/PostController.php',
         'App\\Admin\\Controllers\\TagController' => __DIR__ . '/../..' . '/app/Admin/Controllers/TagController.php',
         'App\\Admin\\Controllers\\TaxonomytermController' => __DIR__ . '/../..' . '/app/Admin/Controllers/TaxonomytermController.php',
+        'App\\Admin\\Controllers\\TermController' => __DIR__ . '/../..' . '/app/Admin/Controllers/TermController.php',
         'App\\Admin\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Admin/Controllers/UserController.php',
         'App\\Admin\\Controllers\\WidgetsController' => __DIR__ . '/../..' . '/app/Admin/Controllers/WidgetsController.php',
         'App\\Admin\\Controllers\\World\\ApiController' => __DIR__ . '/../..' . '/app/Admin/Controllers/World/ApiController.php',
@@ -2350,6 +2359,13 @@ class ComposerStaticInitecc06f27fb55026908a68b2252c49b26
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
+        'Kalnoy\\Nestedset\\AncestorsRelation' => __DIR__ . '/..' . '/kalnoy/nestedset/src/AncestorsRelation.php',
+        'Kalnoy\\Nestedset\\BaseRelation' => __DIR__ . '/..' . '/kalnoy/nestedset/src/BaseRelation.php',
+        'Kalnoy\\Nestedset\\Collection' => __DIR__ . '/..' . '/kalnoy/nestedset/src/Collection.php',
+        'Kalnoy\\Nestedset\\DescendantsRelation' => __DIR__ . '/..' . '/kalnoy/nestedset/src/DescendantsRelation.php',
+        'Kalnoy\\Nestedset\\NestedSet' => __DIR__ . '/..' . '/kalnoy/nestedset/src/NestedSet.php',
+        'Kalnoy\\Nestedset\\NodeTrait' => __DIR__ . '/..' . '/kalnoy/nestedset/src/NodeTrait.php',
+        'Kalnoy\\Nestedset\\QueryBuilder' => __DIR__ . '/..' . '/kalnoy/nestedset/src/QueryBuilder.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
