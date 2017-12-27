@@ -50,11 +50,11 @@ class Term extends Baum\Node
 
     public function specimens()
     {
-        return $this->morphedByMany(Specimen::class, 'data_termable');
+        return $this->morphedByMany(Specimen::class, 'termable');
     }
 
     public function specimenimages()
     {
-        return $this->morphedByMany(SpecimenImage::class, 'data_termable');
+        return $this->morphedByMany(SpecimenImage::class, 'termable');
     }
 }

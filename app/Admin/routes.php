@@ -9,7 +9,6 @@ Route::group([
     'namespace'     => config('admin.route.namespace'),
     'middleware'    => config('admin.route.middleware'),
 ], function (Router $router) {
-
     $router->get('/', 'HomeController@index');
 
     $router->resources([
@@ -37,8 +36,28 @@ Route::group([
         'china/city'            => China\CityController::class,
         'china/district'        => China\DistrictController::class,
 
-        'taxonomyterms'         => TaxonomytermController::class,
-        'terms'                 => TermController::class,
+    ]);
+
+    $router->resources([
+
+        'specimens' => SpecimenController::class,
+        'botanists' => BotanistController::class,
+        'collectors' => CollectorController::class,
+        'determinations' => DeterminationController::class,
+        'geolocations' => GeolocationController::class,
+        'geomountains' => GeomountainController::class,
+        'herbaria' => HerbariumController::class,
+        'nomentype' => NomentypeController::class,
+        'specimen/images' => SpecimenImageController::class,
+
+        'taxonomy/terms' => TermController::class,
+        'taxonomy/commons' => TermCommonNameController::class,
+        'taxonomy/usage' => TermUsageController::class,
+        'taxonomy/rank' => TermRankController::class,
+        'taxonomy/author' => TermAuthorController::class,
+
+        'taxonomy/terms-test'         => TaxonomytermController::class,
+
     ]);
 
     $router->post('posts/release', 'PostController@release');

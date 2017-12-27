@@ -28,6 +28,6 @@ class SpecimenImage extends Model
 
     public function terms()
     {
-        return $this->morphToMany(Term::class, 'data_termable');
+        return $this->morphToMany(Term::class, 'termable');
     }
 }
