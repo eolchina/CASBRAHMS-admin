@@ -41,9 +41,9 @@ Admin::js('/vendor/clipboard/dist/clipboard.min.js');
 Admin::js('/vendor/chartjs/dist/Chart.min.js');
 
 //Big tree config
-Admin::css('/vendor/jquery-bigtree/jquery.bigtree.css');
-Admin::js('/vendor/jquery-bigtree/jquery.bigtree.js');
-// Admin::js('/vendor/jquery-bigtree/jsrender.min.js');
+Admin::css('/vendor/bigtree/bigtree.css');
+Admin::js('/vendor/bigtree/bigtree.js');
+Admin::js('/vendor/bigtree/jsrender.min.js');
 // Admin::js('/vendor/jquery-bigtree/jquery-2.2.1.min.js');
 // Admin::js('/vendor/jquery-bigtree/jquery.ba-throttle-debounce.min.js');
 
@@ -55,15 +55,11 @@ Column::extend('urlWrapper', UrlWrapper::class);
 Column::extend('action', Grid\Displayers\Actions::class);
 
 Column::extend('prependIcon', function ($value, $icon) {
-
     return "<span style='color: #999;'><i class='fa fa-$icon'></i>  $value</span>";
-
 });
 
 Admin::navbar(function (\Encore\Admin\Widgets\Navbar $navbar) {
-
     $navbar->left(view('admin.search-bar'));
 
     $navbar->right(new Links());
-
 });

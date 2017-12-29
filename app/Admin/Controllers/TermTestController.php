@@ -29,15 +29,13 @@ class TermTestController extends Controller
             // $content->body($this->grid());
             //
            
-            // $content->body(view('admin.tests.index', ['root' => Term::root()]));
+            // $content->body(view('admin.tests.bigtree'));
 
 
             $content->body(view('admin.tests.index', [
 
                 'root' => Term::root(),
                 'tree' => Term::where('name', '=', 'Root')->first()->getDescendantsAndSelf()->toHierarchy(),
-                
-
             ]));
         });
     }
