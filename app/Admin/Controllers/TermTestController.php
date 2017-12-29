@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Taxonomyterm;
+use App\Models\Data\Term;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -11,7 +11,7 @@ use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
 
-class TaxonomytermController extends Controller
+class TermTestController extends Controller
 {
     use ModelForm;
 
@@ -23,11 +23,22 @@ class TaxonomytermController extends Controller
     public function index()
     {
         return Admin::content(function (Content $content) {
-
-            $content->header('header');
+            $content->header('header-taxonomy-terms-test');
             $content->description('description');
 
-            $content->body($this->grid());
+            // $content->body($this->grid());
+            //
+           
+            // $content->body(view('admin.tests.index', ['root' => Term::root()]));
+
+
+            $content->body(view('admin.tests.index', [
+
+                'root' => Term::root(),
+                'tree' => Term::where('name', '=', 'Root')->first()->getDescendantsAndSelf()->toHierarchy(),
+                
+
+            ]));
         });
     }
 
@@ -40,7 +51,6 @@ class TaxonomytermController extends Controller
     public function edit($id)
     {
         return Admin::content(function (Content $content) use ($id) {
-
             $content->header('header');
             $content->description('description');
 
@@ -56,7 +66,6 @@ class TaxonomytermController extends Controller
     public function create()
     {
         return Admin::content(function (Content $content) {
-
             $content->header('header');
             $content->description('description');
 
@@ -71,8 +80,7 @@ class TaxonomytermController extends Controller
      */
     protected function grid()
     {
-        return Admin::grid(Taxonomyterm::class, function (Grid $grid) {
-
+        return Admin::grid(Term::class, function (Grid $grid) {
             $grid->id('ID')->sortable();
 
             $grid->name();
@@ -81,14 +89,12 @@ class TaxonomytermController extends Controller
             $grid->updated_at();
 
             $grid->filter(function (Grid\Filter $filter) {
-
                 $filter->disableIdFilter();
 
                 $filter->like('name', 'name');
 
                 $filter->between('updated_at')->datetime();
-
-             });
+            });
         });
     }
 
@@ -99,8 +105,7 @@ class TaxonomytermController extends Controller
      */
     protected function form()
     {
-        return Admin::form(Taxonomyterm::class, function (Form $form) {
-
+        return Admin::form(Term::class, function (Form $form) {
             $form->display('id', 'ID');
 
             $form->text('name', 'Taxon Name');

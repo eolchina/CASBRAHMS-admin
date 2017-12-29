@@ -56,7 +56,7 @@ Route::group([
         'taxonomy/rank' => TermRankController::class,
         'taxonomy/author' => TermAuthorController::class,
 
-        'taxonomy/terms-test'         => TaxonomytermController::class,
+        'taxonomy/termtests'         => TermTestController::class,
 
     ]);
 

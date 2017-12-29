@@ -28,16 +28,10 @@ class TermController extends Controller
     public function index()
     {
         return Admin::content(function (Content $content) {
-
             $content->header('Taxonomic terms header');
             $content->description('here is an examle of how taxonomic term data could be used description');
 
             $content->body($this->grid());
-
-
-            $content->body(view('admin.bigtree.tree'));
-
-            // $content->body(view('admin.charts.bar'));
         });
     }
 
@@ -50,7 +44,6 @@ class TermController extends Controller
     public function edit($id)
     {
         return Admin::content(function (Content $content) use ($id) {
-
             $content->header('header');
             $content->description('description');
 
@@ -66,7 +59,6 @@ class TermController extends Controller
     public function create()
     {
         return Admin::content(function (Content $content) {
-
             $content->header('header');
             $content->description('description');
 
@@ -82,7 +74,6 @@ class TermController extends Controller
     protected function grid()
     {
         return Admin::grid(Term::class, function (Grid $grid) {
-
             $grid->id('ID')->sortable();
 
             $grid->name('name');
@@ -109,14 +100,9 @@ class TermController extends Controller
     protected function form()
     {
         return Admin::form(Term::class, function (Form $form) {
-
             $form->display('id', 'ID');
 
             $form->text('name', 'Name');
-
-            // $ranks = DB::table('data_term_ranks')->pluck('name');
-
-            // $ranks = $grid->rank()->localName();
 
             $form->select('rank', 'Rank')->options(TermRank::all()->pluck('localName'));
             $form->select('usage', 'Usage')->options(TermUsage::all()->pluck('name'));
@@ -126,12 +112,5 @@ class TermController extends Controller
             // $form->display('created_at', 'Created At');
             // $form->display('updated_at', 'Updated At');
         });
-    }
-
-    public function tree()
-    {
-        // return Term::where('name', '=', 'root')->first()->getDescendantsAndSelf()->toHierarchy();
-        // return Term::where('name', '=', 'root')->first()->getDescendantsAndSelf()->toHierarchy()->toArray();
-        return Term::where('name', '=', 'root')->first()->getDescendantsAndSelf()->toHierarchy()->toJson();
     }
 }
