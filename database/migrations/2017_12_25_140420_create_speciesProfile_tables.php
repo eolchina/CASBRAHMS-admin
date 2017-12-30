@@ -13,10 +13,10 @@ class CreateSpeciesProfileTables extends Migration
      */
     public function up()
     {
-        
-         Schema::create('data_terms', function ( Blueprint $table) {
+        Schema::create('data_terms', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('parent_id')->nullable()->default(0);
+            $table->integer('order')->default(0);
             $table->integer('lft');
             $table->integer('rgt');
             $table->integer('depth');
@@ -24,21 +24,21 @@ class CreateSpeciesProfileTables extends Migration
             $table->integer('term_author_id');
             $table->integer('term_usage_id');
             $table->string('name');
-            $table->string('refProto')->nullable()->default(''); 
+            $table->string('refProto')->nullable()->default('');
             $table->string('refLink');
             $table->timestamps();
+        });
 
-         });
-
-         Schema::create('data_term_authors', function ( Blueprint $table) {
+        Schema::create('data_term_authors', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->timestamps();
         });
 
-         Schema::create('data_term_ranks', function ( Blueprint $table) {
+        Schema::create('data_term_ranks', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('parent_id')->nullable()->default(0);
+            $table->integer('order')->default(0);
             $table->integer('lft');
             $table->integer('rgt');
             $table->integer('depth');
@@ -47,26 +47,24 @@ class CreateSpeciesProfileTables extends Migration
             $table->timestamps();
         });
 
-          Schema::create('data_term_usages', function ( Blueprint $table) {
+        Schema::create('data_term_usages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('localName');
             $table->string('description')->nullable()->default('');
             $table->timestamps();
+        });
 
-         });
-
-            Schema::create('data_term_commonnames', function ( Blueprint $table) {
+        Schema::create('data_term_commonnames', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('term_id');
             $table->string('name');
             $table->string('language');
             $table->timestamps();
+        });
 
-         });
 
-
-            Schema::create('data_termables', function ( Blueprint $table) {
+        Schema::create('data_termables', function (Blueprint $table) {
             $table->integer('term_id');
             $table->integer('termable_id');
             $table->string('termable_type');
@@ -79,9 +77,9 @@ class CreateSpeciesProfileTables extends Migration
 
 
          
-         /**
-          * need refine to species model group
-          */
+        /**
+         * need refine to species model group
+         */
          // Schema::create('data_term_profiles', function ( Blueprint $table) {
          //    $table->increments('id');
          //    $table->integer('term_id');
@@ -101,7 +99,6 @@ class CreateSpeciesProfileTables extends Migration
          //    $table->timestamps();
 
          // });
-
     }
 
     /**
@@ -111,7 +108,6 @@ class CreateSpeciesProfileTables extends Migration
      */
     public function down()
     {
-
         Schema::dropIfExists('data_terms');
         Schema::dropIfExists('data_term_usages');
         Schema::dropIfExists('data_term_ranks');

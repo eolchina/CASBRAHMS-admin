@@ -15,6 +15,9 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
+use Encore\Admin\Layout\Row;
+use Encore\Admin\Tree;
+use Encore\Admin\Layout\Column;
 
 class TermController extends Controller
 {
@@ -28,10 +31,14 @@ class TermController extends Controller
     public function index()
     {
         return Admin::content(function (Content $content) {
-            $content->header('Taxonomic terms header');
+            $content->header('All Taxonomic terms');
             $content->description('here is an examle of how taxonomic term data could be used description');
 
-            $content->body($this->grid());
+            $content->row(function (Row $row) {
+                $row->column(6, $this->tree()->render());
+
+                $row->column(6, $this->form()->render());
+            });
         });
     }
 
@@ -44,7 +51,7 @@ class TermController extends Controller
     public function edit($id)
     {
         return Admin::content(function (Content $content) use ($id) {
-            $content->header('header');
+            $content->header('Edit taxonomic term');
             $content->description('description');
 
             $content->body($this->form()->edit($id));
@@ -59,7 +66,7 @@ class TermController extends Controller
     public function create()
     {
         return Admin::content(function (Content $content) {
-            $content->header('header');
+            $content->header('Create taxonomic term');
             $content->description('description');
 
             $content->body($this->form());
@@ -102,7 +109,8 @@ class TermController extends Controller
         return Admin::form(Term::class, function (Form $form) {
             $form->display('id', 'ID');
 
-            $form->text('name', 'Name');
+             $form->select('parent_id', 'Parent')->options(Term::all()->pluck('name'));
+             $form->text('name', 'Name');
 
             $form->select('rank', 'Rank')->options(TermRank::all()->pluck('localName'));
             $form->select('usage', 'Usage')->options(TermUsage::all()->pluck('name'));
@@ -111,6 +119,25 @@ class TermController extends Controller
 
             // $form->display('created_at', 'Created At');
             // $form->display('updated_at', 'Updated At');
+        });
+    }
+
+
+    /**
+    * Make a grid builder.
+    *
+    * @return Grid
+    */
+    protected function tree()
+    {
+        return Term::tree(function (Tree $tree) {
+            $tree->branch(function ($branch) {
+                // $src = config('admin.upload.host') . '/' . $branch['logo'] ;
+
+                // $logo = "<img src='$src' style='max-width:30px;max-height:30px' class='img'/>";
+
+                return "{$branch['name']}";
+            });
         });
     }
 }

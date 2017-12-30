@@ -9,6 +9,7 @@ $factory->define(App\Models\Data\Term::class, function (Faker $faker) {
 
     return [
         'parent_id' => $faker->numberBetween(1, 10),
+        'order' => $faker->numberBetween(1, 10),
         'lft' => $faker->numberBetween(1, 10),
         'rgt' => $faker->numberBetween(1, 10),
         'depth' => $faker->numberBetween(1, 10),
@@ -40,6 +41,7 @@ $factory->define(App\Models\Data\TermRank::class, function (Faker $faker) {
 
     return [
         'parent_id' => $faker->numberBetween(1, 10),
+        'order' => $faker->numberBetween(1, 10),
         'lft' => $faker->numberBetween(1, 10),
         'rgt' => $faker->numberBetween(1, 10),
         'depth' => $faker->numberBetween(1, 10),

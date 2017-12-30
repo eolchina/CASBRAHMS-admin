@@ -3,14 +3,21 @@
 namespace App\Models\Data;
 
 use Illuminate\Database\Eloquent\Model;
+use Encore\Admin\Traits\AdminBuilder;
+use Encore\Admin\Traits\ModelTree;
 use Baum;
 
 class Term extends Baum\Node
 {
+    use ModelTree, AdminBuilder;
+
     protected $table = 'data_terms';
 
     // 'parent_id' column name
     protected $parentColumn = 'parent_id';
+
+    // 'order' column name
+    protected $orderColumn = 'order';
 
     // 'lft' column name
     protected $leftColumn = 'lft';
@@ -23,6 +30,18 @@ class Term extends Baum\Node
 
     // guard attributes from mass-assignment
     protected $guarded = array('id', 'parent_id', 'lft', 'rgt', 'depth');
+
+    /**
+     * reset Title column to use tree model
+     * @param [type] $attributes [description]
+     */
+    public function __construct(array $attributes = [])
+    {
+        
+        parent::__construct($attributes);
+
+        $this->setTitleColumn('name');
+    }
 
 
 
