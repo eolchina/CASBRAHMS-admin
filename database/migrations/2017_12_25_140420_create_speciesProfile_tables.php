@@ -15,17 +15,17 @@ class CreateSpeciesProfileTables extends Migration
     {
         Schema::create('data_terms', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('parent_id')->nullable()->default(0);
+            $table->integer('parent_id')->default(0);
             $table->integer('order')->default(0);
-            $table->integer('lft');
-            $table->integer('rgt');
-            $table->integer('depth');
+            $table->integer('lft')->default(0);
+            $table->integer('rgt')->default(0);
+            $table->integer('depth')->default(0);
             $table->integer('term_rank_id');
             $table->integer('term_author_id');
             $table->integer('term_usage_id');
             $table->string('name');
             $table->string('refProto')->nullable()->default('');
-            $table->string('refLink');
+            $table->string('refLink')->nullable()->default('');
             $table->timestamps();
         });
 

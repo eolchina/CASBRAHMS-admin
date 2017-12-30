@@ -40,12 +40,6 @@ Admin::js('/vendor/clipboard/dist/clipboard.min.js');
 
 Admin::js('/vendor/chartjs/dist/Chart.min.js');
 
-//Big tree config
-Admin::css('/vendor/bigtree/bigtree.css');
-Admin::js('/vendor/bigtree/bigtree.js');
-Admin::js('/vendor/bigtree/jsrender.min.js');
-// Admin::js('/vendor/jquery-bigtree/jquery-2.2.1.min.js');
-// Admin::js('/vendor/jquery-bigtree/jquery.ba-throttle-debounce.min.js');
 
 Column::extend('expand', ExpandRow::class);
 Column::extend('openMap', OpenMap::class);

@@ -34,11 +34,13 @@ class TermController extends Controller
             $content->header('All Taxonomic terms');
             $content->description('here is an examle of how taxonomic term data could be used description');
 
-            $content->row(function (Row $row) {
-                $row->column(6, $this->tree()->render());
+            $content->body($this->tree());
 
-                $row->column(6, $this->form()->render());
-            });
+            // $content->row(function (Row $row) {
+            //     $row->column(6, $this->tree()->render());
+
+            //     $row->column(6, $this->form()->render());
+            // });
         });
     }
 
@@ -109,16 +111,18 @@ class TermController extends Controller
         return Admin::form(Term::class, function (Form $form) {
             $form->display('id', 'ID');
 
-             $form->select('parent_id', 'Parent')->options(Term::all()->pluck('name'));
-             $form->text('name', 'Name');
+            $form->select('parent_id')->options(Term::selectOptions());
+            $form->text('name', 'Name');
 
-            $form->select('rank', 'Rank')->options(TermRank::all()->pluck('localName'));
-            $form->select('usage', 'Usage')->options(TermUsage::all()->pluck('name'));
-            $form->select('commonname', 'Common Name')->options(TermCommonName::all()->pluck('name'));
+            $form->select('term_rank_id', 'Rank')->options(TermRank::all()->pluck('name'));
+            $form->select('term_usage_id', 'Usage')->options(TermUsage::all()->pluck('name'));
+            $form->select('term_author_id', 'Author')->options(TermAuthor::all()->pluck('name'));
+
+            // $form->text('commonname', 'Common Name');
 
 
-            // $form->display('created_at', 'Created At');
-            // $form->display('updated_at', 'Updated At');
+            $form->display('created_at', 'Created At');
+            $form->display('updated_at', 'Updated At');
         });
     }
 
@@ -131,10 +135,9 @@ class TermController extends Controller
     protected function tree()
     {
         return Term::tree(function (Tree $tree) {
-            $tree->branch(function ($branch) {
-                // $src = config('admin.upload.host') . '/' . $branch['logo'] ;
 
-                // $logo = "<img src='$src' style='max-width:30px;max-height:30px' class='img'/>";
+            // $tree->disableCreate();
+            $tree->branch(function ($branch) {
 
                 return "{$branch['name']}";
             });
