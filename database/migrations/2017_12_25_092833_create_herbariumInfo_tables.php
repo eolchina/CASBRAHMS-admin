@@ -109,7 +109,7 @@ class CreateHerbariumInfoTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('data_geolocationables', function (Blueprint $table) {
+        Schema::create('geolocationables', function (Blueprint $table) {
             $table->integer('geolocation_id');
             $table->integer('geolocationable_id');
             $table->string('geolocationable_type');
@@ -130,7 +130,7 @@ class CreateHerbariumInfoTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('data_geomountainables', function (Blueprint $table) {
+        Schema::create('geomountainables', function (Blueprint $table) {
             $table->integer('geomountain_id');
             $table->integer('geomountainable_id');
             $table->string('geomountainable_type');
@@ -170,9 +170,9 @@ class CreateHerbariumInfoTables extends Migration
         Schema::dropIfExists('data_specimen_images');
         Schema::dropIfExists('data_determinations');
         Schema::dropIfExists('data_geomountains');
-        Schema::dropIfExists('data_geomountainables');
+        Schema::dropIfExists('geomountainables');
         Schema::dropIfExists('data_geolocations');
-        Schema::dropIfExists('data_geolocationables');
+        Schema::dropIfExists('geolocationables');
         Schema::dropIfExists('data_collections');
         Schema::dropIfExists('data_nomentypes');
         Schema::dropIfExists('data_herbaria');

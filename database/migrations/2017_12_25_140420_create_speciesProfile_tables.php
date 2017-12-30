@@ -20,9 +20,9 @@ class CreateSpeciesProfileTables extends Migration
             $table->integer('lft')->default(0);
             $table->integer('rgt')->default(0);
             $table->integer('depth')->default(0);
-            $table->integer('term_rank_id');
-            $table->integer('term_author_id');
-            $table->integer('term_usage_id');
+            $table->integer('term_rank_id')->default(1);
+            $table->integer('term_author_id')->default(1);
+            $table->integer('term_usage_id')->default(1);
             $table->string('name');
             $table->string('refProto')->nullable()->default('');
             $table->string('refLink')->nullable()->default('');
@@ -64,7 +64,7 @@ class CreateSpeciesProfileTables extends Migration
         });
 
 
-        Schema::create('data_termables', function (Blueprint $table) {
+        Schema::create('termables', function (Blueprint $table) {
             $table->integer('term_id');
             $table->integer('termable_id');
             $table->string('termable_type');
@@ -114,6 +114,6 @@ class CreateSpeciesProfileTables extends Migration
         // Schema::dropIfExists('data_term_profiles');
         Schema::dropIfExists('data_term_commonnames');
         Schema::dropIfExists('data_term_authors');
-        Schema::dropIfExists('data_termables');
+        Schema::dropIfExists('termables');
     }
 }

@@ -18,16 +18,16 @@ class SpecimenImage extends Model
 
     public function geolocations()
     {
-        return $this->morphToMany(Geolocation::class, 'data_geolocationable');
+        return $this->morphToMany(Geolocation::class, 'geolocationable', 'geolocationables');
     }
 
     public function geomountains()
     {
-        return $this->morphToMany(Geomountain::class, 'data_geomountainable');
+        return $this->morphToMany(Geomountain::class, 'geomountainable', 'geomountainables');
     }
 
     public function terms()
     {
-        return $this->morphToMany(Term::class, 'termable');
+        return $this->morphToMany(Term::class, 'termable', 'termables');
     }
 }
